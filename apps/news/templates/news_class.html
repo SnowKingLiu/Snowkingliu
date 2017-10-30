@@ -1,0 +1,27 @@
+{% extends 'news_base.html' %}
+{% load staticfiles %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+<div class="news-class-list row" style="margin-left: 88px; padding: 10px 40px 40px 40px">
+    <h1>{{ title }}</h1>
+    <div id="row_1" class="col-lg-3 col-md-3 col-sm-3">
+
+    </div>
+    <div id="row_2" class="col-lg-3 col-md-3 col-sm-3">
+
+    </div>
+    <div id="row_3" class="col-lg-3 col-md-3 col-sm-3">
+
+    </div>
+    <div id="row_4" class="col-lg-3 col-md-3 col-sm-3">
+
+    </div>
+
+
+</div>
+
+<!-- news_class scripts -->
+<script src="{% static 'js/jquery-2.1.1.js'%}"></script>
+<script src="{% static 'js/news/news_class.js'%}"></script>
+{% endblock %}
+

@@ -1,0 +1,123 @@
+.snow-navbar{
+	padding-left: 12px;
+	padding-top: 5px;
+	padding-right: 5px;
+}
+.snow-navbar-header{
+	padding: 9px;
+}
+.snow-nav-pills-first{
+	padding-left: 30px;
+}
+.snow-nav-a{
+	color: #02000B;
+	font-size: 20px;
+}
+.snow-nav-pills{
+	padding-left: 30px;
+}
+.snow-nav-login-btn{
+	float: right;
+	margin-right: 20px;
+	margin-top: 5px;
+}
+.snow-body{
+}
+.snow-logo{
+	margin-top: 9px;
+}
+.snow-nav-large{
+	padding: 9px;
+	margin-top: 9px;
+}
+.snow-feedback-panel{
+	margin-top: 100px;
+}
+.snow-dropdown-navbar{
+	margin-top: 50px;
+}
+.snow-main-body{
+	background-image: url(/static/img/background_jquery.jpeg);
+	background-position: center; 
+	background-attachment: fixed;
+	background-repeat: no-repeat repeat;
+	background-size: cover;
+}
+.snow-section-imgs{
+	margin-top: 55px;
+}
+.snow-main-windows{
+	height: 700px;
+}
+.snow-login-bg{
+	background-image: url(/static/img/login_background.jpg);
+	background-position: center; 
+	background-attachment: fixed;
+	background-repeat: no-repeat repeat;
+	background-size: cover;
+}
+.snow-banner{
+	margin-top: 130px;
+	max-width: 750px;
+}
+.snow-login-panel{
+	margin-top: 130px;
+}
+.snow-portrait{
+	height: 20px;
+	width: 20px;
+	background: #211212;
+}
+.snow-theme-color{
+	color: #02000b;
+}
+.snow-nav-login-user{
+	float: right;
+	margin-right: 20px;
+	margin-top: 5px;
+}
+.snow-register-bg{
+	background-image:url(../img/regiser_background.jpeg); 	
+	background-position: center; 
+	background-attachment: fixed;
+	background-repeat: no-repeat repeat;
+	background-size: cover;
+}
+.snow-captcha{
+	height: 50px;
+	width: 100px;
+	background: #211212;
+}
+.snow-captcha-input{
+	margin-right: 100px;
+}
+.snow-captcha-span{
+	padding: 0px;
+}
+.meau-container{
+    width: 300px;
+}
+.snow-head-img{
+    height: 50px;
+    width: 50px;
+}
+.snow-test-1{
+    background: #0d8ddb;
+}
+.snow-test-2{
+    background: #342134;
+}
+.meau-head-container{
+    height: 300px;
+    width: 100%;
+}
+
+/*这里是侧边栏*/
+.snow-left-menu{
+    z-index:9999;
+    _position:absolute;
+    position:fixed;
+    height:100%;
+    width: 88px;
+    background: #005689;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	{% load staticfiles %}
+	<head>
+	    <meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width,initial-scale=1">
+	    <title>雪君在线</title>
+	    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	    <link rel="stylesheet" type="text/css" href="/static/bootstrap/3.3.0/css/bootstrap.min.css"/>
+	    <script src="/static/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	    <link rel="stylesheet" type="text/css" href="/static/css/snow.css"/>
+	</head>
+	<body class="snow-main-body">
+		<nav class="navbar navbar-default snow-navbar" role="navigation">
+			<!--大窗口-->
+			<div class="container-fluid  hidden-xs">
+				<div class="row">
+					<div class="navbar-header snow-navbar-header col-md-2 col-sm-2 col-lg-2"><!--logo-->
+						<a href="#">
+							<img src="/static/img/navbar_header.svg"/>
+						</a>
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-6"><!--Nav-pills-->
+						<ul class="nav nav-pills">
+							<li class=" snow-nav-pills-first"><a class="snow-nav-a" href="#">首页</a></li>
+							<li class=" snow-nav-pills"><a class="snow-nav-a" href="#">论坛</a></li>
+						</ul>
+					</div>
+					<!--判断登陆成功与否-->
+					{% if request.user.is_authenticated %}
+                        <div class="snow-nav-login-user" style="float: right;margin-right: 20px;">
+                            <img src="/static/img/defaultHeadPortrait.jpg"style="width:40px;height:40px;margin-top: 5px;"
+                                class="img-circle"/>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        UserName <b class="caret"></b>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">个人中心</a></li>
+                                        <li><a href="#">设置</a></li>
+                                        <li><a href="#">私信</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">退出</a></li>
+                                    </ul>
+                                </li>
+                           </ul>
+                        </div>
+                        {% else %}
+                        <div class="snow-nav-login-btn">
+                            <button type="button" class="btn btn-md btn-info" data-toggle="dropdown"
+                                onclick="javascript:window.location.href='/login/'">
+                                <span class="glyphicon glyphicon-user" style="color: #FFFFFF;"></span>登录</button>
+                        </div>
+                    {% endif %}
+
+
+				</div>
+
+			</div>
+			<!--小窗口-->
+			<div class="dropdown visible-xs">
+				<div class="navbar-brand">
+					Snowkingliu
+				</div>
+				<div class="pull-right">
+					<span class="glyphicon glyphicon-align-right btn btn-lg dropdown-toggle" data-toggle="dropdown" id="dropdownMenu1"></span>
+				<ul class="dropdown-menu snow-dropdown-navbar" role="menu" aria-labelledby="dropdownMenu1">
+					<li role="presentation">
+						<a role="menuitem" tabindex="-1" href="#">主页</a>
+					</li>
+					<li role="presentation">
+						<a role="menuitem" tabindex="-1" href="#">论坛</a>
+					</li>
+					<li role="presentation" class="divider"></li>
+					<li role="presentation">
+						<a role="menuitem" tabindex="-1" href="/login/">登录</a>
+					</li>
+				</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="container"><!--正文内容-->
+			<div class="row">
+				<!--
+                	作者：956484336@qq.com
+                	时间：2017-02-03
+                	描述：xs 环境下隐藏；其他显示
+                -->
+				<nav class="col-xs-12 col-sm-2 col-md-2 col-lg-2 hidden-xs" id="leftScrollspy" style="background: #34fe43;">
+					<ul class="nav nav-pills nav-stacked">
+						<li>
+							<a href="#section_home">
+								<img class="snow-section-imgs" src="/static/img/section_home.svg"/>
+							</a>
+						</li>
+						<li>
+							<a href="#section_games">
+								<img class="snow-section-imgs" src="/static/img/section_games.svg"/>
+							</a>
+						</li>
+						<li><a href="#section_user">
+								<img class="snow-section-imgs" src="/static/img/section_user.svg"/>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="snow-main-windows col-xs-12 col-sm-10 col-md-10 col-lg-10" 
+					style="background: #F5F543;"id="section_home">
+				</div>
+				
+			</div>
+			
+			<div class="row"><!--picture*4-->
+					<div class="col-lg-3 col-md-3 col-sm-3">
+						<a href="#" class="thumbnail">
+							<img src="/static/img/thumbnail_moon.jpg"/>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3">
+						<a href="#" class="thumbnail">
+							<img src="/static/img/thumbnail_factory.jpg"/>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3">
+						<a href="#" class="thumbnail">
+							<img src="/static/img/thumbnail_books.jpg"/>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3">
+						<a href="#" class="thumbnail">
+							<img src="/static/img/thumbnail_men.jpg"/>
+						</a>
+					</div>
+				</div>
+		
+		</div>
+		
+		<div class="container">
+			
+		</div>
+	</body>
+</html>

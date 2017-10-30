@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}雪君在线{% endblock %} - 雪君在线</title>
+    <meta charset="UTF-8">
+    {% load staticfiles %}
+    <link href="{% static 'bootstrap/3.3.0/css/bootstrap.min.css'%}" rel="stylesheet">
+    <link href="{% static 'css/snow.css'%}" rel="stylesheet">
+    <link href="{% static 'css/news.css'%}" rel="stylesheet">
+    <link rel="SHORTCUT ICON" href="{% static 'img/news/logo/favicon.ico'%}">
+</head>
+<body id="body">
+
+<div>
+    {% include 'news_menu.html' %}
+
+    {% block content %}
+    <div>
+        雪君在线欢迎您!
+    </div>
+    {% endblock %}
+</div>
+
+</body>
+</html>
+
+<!-- Mainly scripts -->
+<script src="{% static 'js/jquery-2.1.1.js'%}"></script>
+<script src="{% static 'js/bootstrap.min.js'%}"></script>
+<script src="{% static 'js/news/news.js'%}"></script>
+
+<!-- Lodash scripts -->
+<script src="{% static 'js/lodash.js'%}"></script>
+<script src="{% static 'js/csrf.js'%}"></script>

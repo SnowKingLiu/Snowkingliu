@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    {% load staticfiles %}
+    <link href="{% static 'bootstrap/3.3.0/css/bootstrap.min.css'%}" rel="stylesheet">
+    <link href="{% static 'css/snow.css'%}" rel="stylesheet">
+</head>
+<body>
+<!--巨丑div-->
+<div>
+{#    {% include 'header.html' %}#}
+    <!--左边导航栏-->
+    {% include 'news_menu.html' %}
+    {% block data %}{% endblock %}
+    <div>
+        <!--巨丑工具-->
+        <div style="width:100%">
+            <div class="input-group" style="width: 300px">
+                <input type="text" class="form-control" placeholder="搜索" id="input">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" id="search">
+                        搜索
+                    </button>
+                </span>
+            </div><!-- /input-group -->
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-default" onclick="category(this)">男科</button>
+                <button type="button" class="btn btn-default" onclick="category(this)">妇科</button>
+                <button type="button" class="btn btn-default" onclick="category(this)">老人</button>
+            </div>
+        </div>
+        <!--巨丑显示-->
+        <div id = 'all_news'></div>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+<!-- Mainly scripts -->
+<script src="{% static 'js/jquery-2.1.1.js'%}"></script>
+<script src="{% static 'js/bootstrap.min.js'%}"></script>
+<script src="{% static 'js/news/news.js'%}"></script>
+
+<!-- Menu -->
+<script src="{% static 'js/menu.js'%}"></script>
+

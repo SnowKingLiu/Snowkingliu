@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>论坛</title>
+    {% load staticfiles %}
+    <link href="{% static 'bootstrap/3.3.0/css/bootstrap.min.css'%}" rel="stylesheet">
+    <link href="{% static 'css/snow.css'%}" rel="stylesheet">
+    <link href="{% static 'font-awesome/css/font-awesome.css'%}" rel="stylesheet">
+    <link href="{% static 'css/animate.css'%}" rel="stylesheet">
+</head>
+<body>
+ {% include 'header.html' %}
+        <div>
+            {% include 'menu.html' %}
+            {% block data %}{% endblock %}
+        </div>
+        {% include 'footer.html' %}
+</body>
+</html>

@@ -1,0 +1,90 @@
+{% load staticfiles %}
+<div class="pull-left snow-left-menu hidden-xs">
+    <div>
+        <img src="{% static 'img/news/logo/news_logo.svg'%}" alt="雪君在线" style="padding-top: 40px;padding-left: 12px">
+        <ul class="nav nav-stacked" role="tablist">
+            <div style="height: 40px">
+{#                男科+妇科+老人+整形外科+不孕不育+肿瘤科+胃病+糖尿病科+心血管科+肝病科+肾病科+肛肠科+泌尿科+耳鼻喉科+#}
+{#                眼科+口腔科+骨科+皮肤科+神经科+营养科+保健+养生+减肥+心理科+科普+体育+财经+科技+社会+军事+时尚+美食#}
+            </div>
+{#            <li class="snow-menu-item"><a href="/news/" align="center" style="color: #FFFFFF">首页</a></li>#}
+{#            <li class="snow-menu-item"><a href="#" align="center" style="color: #FFFFFF">推荐</a></li>#}
+{#            <li class="snow-menu-item"><a href="#" align="center" style="color: #FFFFFF">男科</a></li>#}
+{#            <li class="snow-menu-item"><a href="#" align="center" style="color: #FFFFFF">妇科</a></li>#}
+{#            <li class="snow-menu-item"><a href="#" align="center" style="color: #FFFFFF">泌尿科</a></li>#}
+{#            <li class="snow-menu-item"><a href="#" align="center" style="color: #FFFFFF">整形外科</a></li>#}
+{#            <li class="snow-menu-item"><a href="#" align="center" style="color: #FFFFFF">不孕不育</a></li>#}
+{#            <li class="snow-menu-item"><a href="#" align="center" style="color: #FFFFFF">肿瘤科</a></li>#}
+{#            <li class="snow-menu-item"><a href="#" align="center" style="color: #FFFFFF">胃病</a></li>#}
+{#            <li class="snow-menu-item"><a href="#" align="center" style="color: #FFFFFF">糖尿病科</a></li>#}
+{#            <li class="snow-menu-item"><a href="#" align="center" style="color: #FFFFFF">心血管科</a></li>#}
+{#            <li class="snow-menu-item"><a href="#" align="center" style="color: #FFFFFF">肝病科</a></li>#}
+{#            <li class="snow-menu-item"><a href="#" align="center" style="color: #FFFFFF">肾病科</a></li>#}
+            <div class="btn-group dropup">
+                <li class=" dropdown-toggle" data-toggle="dropdown"
+                        style="background-color: #005689; margin: 0px 0px 10px 21px;color: #ffffff;">搜索
+                    <span class="glyphicon glyphicon-search"></span>
+                </li>
+                <ul class="dropdown-menu" role="menu" style="width: 300px;margin: 0px 0px -38px 88px;padding: 5px">
+                    <li>
+                        <div class="input-group">
+                            <input id="news_input" type="text" class="form-control">
+                            <span class="input-group-btn" >
+                                <button class="btn btn-default" type="button" id="news_search">
+                                    搜索
+                                </button>
+                            </span>
+                        </div><!-- /input-group -->
+                    </li>
+                </ul>
+            </div>
+            <li class="snow-menu-item"><a href="/news/" align="center" style="color: #FFFFFF">首页</a></li>
+            <li class="snow-menu-item"><a href="/news/class/recommend" align="center" style="color: #FFFFFF">推荐</a></li>
+            <li class="snow-menu-item"><a href="/news/class/cancer" align="center" style="color: #FFFFFF">肿瘤科</a></li>
+            <li class="snow-menu-item"><a href="/news/class/stomach" align="center" style="color: #FFFFFF">胃病</a></li>
+            <li class="snow-menu-item"><a href="/news/class/diabetes" align="center" style="color: #FFFFFF">糖尿病科</a></li>
+            <li class="snow-menu-item"><a href="/news/class/cvd" align="center" style="color: #FFFFFF">心血管科</a></li>
+            <li class="snow-menu-item"><a href="/news/class/liver" align="center" style="color: #FFFFFF">肝病科</a></li>
+            <li class="snow-menu-item"><a href="/news/class/kidney" align="center" style="color: #FFFFFF">肾病科</a></li>
+            <li class="snow-menu-item"><a href="/news/class/man" align="center" style="color: #FFFFFF">男科</a></li>
+            <li class="snow-menu-item"><a href="/news/class/woman" align="center" style="color: #FFFFFF">妇科</a></li>
+            <li class="snow-menu-item"><a href="/news/class/ent" align="center" style="color: #FFFFFF">耳鼻喉科</a></li>
+            <li class="snow-menu-item"><a href="/news/class/eye" align="center" style="color: #FFFFFF">眼科</a></li>
+            <li class="snow-menu-item"><a href="/news/class/mouth" align="center" style="color: #FFFFFF">口腔科</a></li>
+
+            <li class="dropdown dropup snow-menu-item">
+                <a class="dropdown-toggle dropdown dropup snow-menu-item" data-toggle="dropdown" href="#" style="color: #FFFFFF">
+                    更多<span class="caret" style="color: #FFFFFF"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/news/class/nerve" align="center" style="color: #005689">神经科</a></li>
+                    <li><a href="/news/class/bone" align="center" style="color: #005689">骨科</a></li>
+                    <li><a href="/news/class/skin" align="center" style="color: #005689">皮肤科</a></li>
+                    <li><a href="/news/class/urinary" align="center" style="color: #005689">泌尿科</a></li>
+                    <li><a href="/news/class/anorectum" align="center" style="color: #005689">肛肠科</a></li>
+                    <li><a href="/news/class/psychology" align="center" style="color: #005689">心理科</a></li>
+                    <li><a href="/news/class/plastic" align="center" style="color: #005689">整形外科</a></li>
+                    <li><a href="/news/class/infertility" align="center" style="color: #005689">不孕不育</a></li>
+                    <li><a href="/news/class/baby" align="center" style="color: #005689">育儿</a></li>
+                    <li><a href="/news/class/oldman" align="center" style="color: #005689">老人</a></li>
+                    <li><a href="/news/class/nutrition" align="center" style="color: #005689">营养科</a></li>
+                    <li><a href="/news/class/care" align="center" style="color: #005689">保健</a></li>
+                    <li><a href="/news/class/health" align="center" style="color: #005689">养生</a></li>
+                    <li><a href="/news/class/weight" align="center" style="color: #005689">减肥</a></li>
+                    <li><a href="/news/class/science" align="center" style="color: #005689">科普</a></li>
+                    <li><a href="/news/class/sports" align="center" style="color: #005689">体育</a></li>
+                    <li><a href="/news/class/society" align="center" style="color: #005689">社会</a></li>
+                    <li><a href="/news/class/technology" align="center" style="color: #005689">科技</a></li>
+                    <li><a href="/news/class/fashion" align="center" style="color: #005689">时尚</a></li>
+                    <li><a href="/news/class/military" align="center" style="color: #005689">军事</a></li>
+                    <li><a href="/news/class/economy" align="center" style="color: #005689">财经</a></li>
+                    <li><a href="/news/class/cate" align="center" style="color: #005689">美食</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+
+
+</div>
+

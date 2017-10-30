@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width,initial-scale=1">
+	    <title>用户反馈</title>
+	    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	    <link rel="stylesheet" type="text/css" href="/static/bootstrap/3.3.0/css/bootstrap.min.css"/>
+	    <script src="/static/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	    <link rel="stylesheet" type="text/css" href="/static/css/snow.css"/>
+	</head>
+    <body class="snow-body">
+    	<nav class="navbar navbar-default snow-navbar" role="navigation">
+			<!--大窗口-->
+			<div class="container-fluid  hidden-xs">
+				<div class="row">
+					<div class="navbar-header snow-navbar-header col-md-2 col-sm-2 col-lg-2"><!--logo-->
+						<a href="#">
+							<img src="/static/img/navbar_header.svg"/>
+						</a>
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-6"><!--Nav-pills-->
+						<ul class="nav nav-pills">
+							<li class=" snow-nav-pills-first"><a class="snow-nav-a" href="#">首页</a></li>
+							<li class=" snow-nav-pills"><a class="snow-nav-a" href="#">论坛</a></li>
+						</ul>
+					</div>
+					<div class="snow-login-bg">
+						<button type="button" class="btn btn-md btn-info" data-toggle="dropdown"><span class="glyphicon glyphicon-user" style="color: #FFFFFF;"></span>登录</button>
+					</div>
+				</div>
+
+			</div>
+			<!--小窗口-->
+			<div class="dropdown visible-xs">
+				<div class="navbar-brand">
+					用户反馈
+				</div>
+				<div class="pull-right">
+					<span class="glyphicon glyphicon-align-right btn btn-lg dropdown-toggle" data-toggle="dropdown" id="dropdownMenu1"></span>
+				<ul class="dropdown-menu snow-dropdown-navbar" role="menu" aria-labelledby="dropdownMenu1">
+					<li role="presentation">
+						<a role="menuitem" tabindex="-1" href="#">主页</a>
+					</li>
+					<li role="presentation">
+						<a role="menuitem" tabindex="-1" href="#">论坛</a>
+					</li>
+					<li role="presentation" class="divider"></li>
+					<li role="presentation">
+						<a role="menuitem" tabindex="-1" href="#">登录</a>
+					</li>
+				</ul>
+				</div>
+			</div>
+		</nav>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-2 col-sm-1"></div>
+				<div class="col-lg-6 col-md-8 col-sm-10 text-center">
+					<div class="panel hidden-xs panel-warning snow-feedback-panel">
+						<div class="panel-heading">
+							用户反馈
+						</div>
+						<div class="panel-body">
+							<form action="{% url 'go_feedback' %}" method="post" role="form" class="text-left">
+								<div class="form-group">
+									<label for="name">姓名：</label>
+									<input type="text" class="form-control" name="name"  placeholder="请输入您的姓名">
+								</div>
+								<div class="form-group">
+									<label for="name">邮箱：</label>
+									<input type="text" class="form-control" name="email" placeholder="请输入您的邮箱">
+								</div>
+								<div class="form-group">
+									<label for="name">地址：</label>
+									<input type="text" class="form-control" name="address" placeholder="请输入您的联系地址">
+								</div>
+								<div class="form-group">
+									<label for="name">反馈意见：</label>
+									<textarea class="form-control" name="message" rows="5" placeholder="请输入您的反馈意见"></textarea>
+								</div>
+								<button type="submit" class="btn btn-info btn-lg pull-right ">提交</button>
+                                {% csrf_token %}
+							</form>
+						</div>
+					</div>
+                    <div class="visible-xs">
+                        <form action="#" method="post" role="form" class="text-left">
+							<div class="form-group">
+								<label for="name">姓名：</label>
+								<input type="text" class="form-control" name="name"  placeholder="请输入您的姓名">
+							</div>
+							<div class="form-group">
+								<label for="name">邮箱：</label>
+								<input type="text" class="form-control" name="email" placeholder="请输入您的邮箱">
+							</div>
+							<div class="form-group">
+								<label for="name">地址：</label>
+								<input type="text" class="form-control" name="address" placeholder="请输入您的联系地址">
+							</div>
+							<div class="form-group">
+								<label for="name">反馈意见：</label>
+								<textarea class="form-control" name="message" rows="5" placeholder="请输入您的反馈意见"></textarea>
+							</div>
+							<button type="submit" class="btn btn-info btn-lg pull-right ">提交</button>
+                                {% csrf_token %}
+						</form>
+                   </div>
+				</div>
+			</div>
+		</div>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+{% extends 'news_base.html' %}
+{% load staticfiles %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+<style>
+body{
+    background: #ffffff;
+}
+</style>
+
+<div class="row" style="background-color: #FFFFFF">
+    <div class="col-lg-1 col-md-1 col-sm-1 "></div>
+    <div class="col-lg-7 col-md-7 col-sm-7 ">
+        <div style="padding:20px">
+            <!--标题-->
+            <h2>{{ title }}</h2>
+            <div class="pull-right" style="color: #5E5E5E">
+                {{ createtime }}
+                转自：
+                {{ web }}
+                阅读量：
+                {{ read }}
+                |
+                <a id="tort" style="color: #005689">侵删</a>
+            </div>
+            <div class="news-content" style="margin-top: 47px;color: #5E5E5E;font-size: 18px;width: 100%">
+                {% autoescape off %}
+
+                {{content}}
+
+                {% endautoescape %}
+            </div>
+        </div>
+    </div>
+    <div id="news-correlation" class="col-lg-4 col-md-4 col-sm-4 " style="margin-top: 115px;padding-right: 20px">
+        <hr />
+        <h4>相关推荐</h4>
+        <br />
+        <div id="news_correlation">
+
+        </div>
+    </div>
+</div>
+<script src="{% static 'js/news/news_article.js'%}"></script>
+{% endblock %}

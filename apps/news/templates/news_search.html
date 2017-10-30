@@ -1,0 +1,16 @@
+{% extends 'news_base.html' %}
+{% load staticfiles %}
+{% block title %}搜索{{ search }}{% endblock %}
+{% block content %}
+<div class="news-class-list row" style="margin-left: 88px; padding: 10px 40px 40px 40px">
+    <h1>搜索{{ search }}...</h1>
+    {% autoescape off %}
+          {{ content }}
+    {% endautoescape %}
+
+</div>
+
+<script src="{% static 'js/news/news_search.js'%}"></script>
+
+{% endblock %}
+
